@@ -1,0 +1,16 @@
+#!/bin/sh
+# put this file in /etc/rc.d/substrate WITH EXECUTABLE PERMS to use cim3xm0dum
+
+echo init &>/cim3xlog
+date      &>/cim3xlog
+
+(
+if [ "$(nvram ac3success)" == "$(printf 'ac3success\tyes\n')" ]; then
+        # next version may use bootargs instead so it can be disabled from irecovery
+        nvram ac3success=no    # this is the bootloop protection, in the installed OS this variable is set back to yes, allowing a boot, so if the images fail to load, they will not be loaded the next time. 
+        nvram -p               # for debugging
+        echo done
+        /multi_kloader /iBSS /iBEC
+        /deepsleep
+fi
+) &>>/cim3xlog &
