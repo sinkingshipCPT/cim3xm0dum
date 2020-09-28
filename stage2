@@ -1,0 +1,10 @@
+#!/bin/sh
+# this installs stage2 on the guest os, allowing the boot
+
+mkdir -p /etc/rc.d/substrate
+
+echo                        &>> /etc/rc.d/substrate
+echo "#!/bin/sh"            &>> /etc/rc.d/substrate # if it already exists this will not be a problem
+echo "nvram ac3success=yes" &>> /etc/rc.d/substrate # if it already exists this will not be a problem
+
+chmod +x /etc/rc.d/substrate
