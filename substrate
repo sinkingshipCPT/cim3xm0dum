@@ -1,4 +1,5 @@
 #!/bin/sh
+# cim3xm0dum stage1
 # put this file in /etc/rc.d/substrate WITH EXECUTABLE PERMS to use cim3xm0dum
 
 echo init &>/cim3xlog
