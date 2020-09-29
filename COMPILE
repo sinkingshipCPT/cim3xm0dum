@@ -1,1 +1,4 @@
-To compile cim3xm0dum's tools, you need to compile multi_kloader in this repository, and deepsleep in this repository.
+To compile cim3xm0dum's tools, you need to compile multi_kloader from link 1, and deepsleep from link 2.
+
+1: https://github.com/spacepilotAV/ios-kexec-utils ( you need the iPhoneOS6.1SDK! )
+2: https://github.com/spacepilotAV/deepsleep
