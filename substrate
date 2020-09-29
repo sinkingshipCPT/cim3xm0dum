@@ -2,8 +2,8 @@
 # cim3xm0dum stage1
 # put this file in /etc/rc.d/substrate WITH EXECUTABLE PERMS to use cim3xm0dum
 
-echo init &>/cim3xlog
-date      &>/cim3xlog
+echo init &>> /cim3xlog
+date      &>> /cim3xlog
 
 (
 if [ "$(nvram ac3success)" == "$(printf 'ac3success\tyes\n')" ]; then
